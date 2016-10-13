@@ -21,14 +21,13 @@ class ColorTableViewController: UITableViewController {
         
         var crayonContainer: [Crayon] = []
         for c in crayonData {
-            if let crayon = Crayon(fromDict: c) {
+            if let crayon = Crayon(crayonDict: c) {
                 crayonContainer.append(crayon)
             }
         }
         crayons = crayonContainer
-        for i in crayons!{
-            print(i.name)
-        }
+        
+        dump(crayons)
     }
 
     override func didReceiveMemoryWarning() {

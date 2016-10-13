@@ -7,7 +7,13 @@
 //
 
 import Foundation
-
+/*
+ [
+ "hex": "#EFDECD",
+ "name": "Almond",
+ "rgb": "(239, 222, 205)"
+ ],
+ */
 class Crayon {
     var name: String
     var red: Double
@@ -19,6 +25,22 @@ class Crayon {
         self.red = red
         self.green = green
         self.blue = blue
+    }
+    
+    convenience init?(crayonDict: [String: Any]){
+        if let name = crayonDict["name"] as? String,
+            var rgb = crayonDict["rgb"] as? String{
+            rgb.characters.removeFirst()
+            rgb.characters.removeLast()
+            let colorArr = rgb.components(separatedBy: ", ")
+            if let redS = Double(colorArr[0]), let greenS = Double(colorArr[1]), let blueS = Double(colorArr[2]){
+                self.init(name: name, red: redS/255.0, green: greenS/255.0, blue: blueS/255.0)
+            }else{
+                return nil
+            }
+        }else{
+            return nil
+        }
     }
     
     convenience init?(fromDict:[String:Any]) {

@@ -19,7 +19,7 @@ class OtherViewController: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        textField.delegate = self
         _ = self.setting()
         
     }
@@ -43,33 +43,17 @@ class OtherViewController: UIViewController, UITextFieldDelegate{
         self.textField.text = String(sender.value)
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        print("did end")
-    }
-    
-    internal func textFieldUpdate() -> Bool{
-        self.slider.value = Float(textField.text!)!
-        self.stepper.value = Double(textField.text!)!
-        self.label.text = textField.text
-        return true
-    }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-    
-    // only interested in doing this validation for self.nameTextField
-    // and per documentation, string can be empty if the change is a deletion
-    
-        if textField == self.textField && string != "" {
-            return false
-        }
-        return true
-    }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        _ = textFieldUpdate()
+        _ = textFieldUpdate(Int(textField.text!)!)
         return true
     }
 
+    internal func textFieldUpdate(_ value:Int) {
+        self.slider.value = Float(value)
+        self.stepper.value = Double(value)
+        self.label.text = String(value)
+    }
+    
     internal func setting(){
         self.slider.value = 50
         self.stepper.value = 50

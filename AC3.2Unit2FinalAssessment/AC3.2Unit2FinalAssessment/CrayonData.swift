@@ -57,7 +57,7 @@ let crayolaColors = [
     [
         "hex": "#000000",
         "name": "Black",
-        "rgb": "(0,0,0)"
+        "rgb": "(0, 0, 0)"
     ],
     [
         "hex": "#ACE5EE",

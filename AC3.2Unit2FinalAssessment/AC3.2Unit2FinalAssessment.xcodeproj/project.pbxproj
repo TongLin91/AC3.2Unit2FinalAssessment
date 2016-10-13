@@ -62,13 +62,11 @@
 		EDE1D4741DA69A1200A5A145 /* AC3.2Unit2FinalAssessment */ = {
 			isa = PBXGroup;
 			children = (
-				EDE1D4751DA69A1300A5A145 /* AppDelegate.swift */,
 				EDE1D4891DA69DB900A5A145 /* Models */,
 				EDE1D4931DA6A69400A5A145 /* Views */,
 				EDE1D48C1DA69E2400A5A145 /* Controllers */,
-				EDE1D4791DA69A1300A5A145 /* Main.storyboard */,
+				EDE1D4751DA69A1300A5A145 /* AppDelegate.swift */,
 				EDE1D47C1DA69A1300A5A145 /* Assets.xcassets */,
-				EDE1D47E1DA69A1300A5A145 /* LaunchScreen.storyboard */,
 				EDE1D4811DA69A1300A5A145 /* Info.plist */,
 			);
 			path = AC3.2Unit2FinalAssessment;
@@ -96,6 +94,8 @@
 		EDE1D4931DA6A69400A5A145 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EDE1D4791DA69A1300A5A145 /* Main.storyboard */,
+				EDE1D47E1DA69A1300A5A145 /* LaunchScreen.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -342,6 +342,7 @@
 				EDE1D4861DA69A1300A5A145 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

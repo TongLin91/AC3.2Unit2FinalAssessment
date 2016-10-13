@@ -120,7 +120,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8nX-7o-5HG">
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <connections>
                                     <action selector="textFieldUpdate:" destination="8ga-BZ-wpZ" eventType="editingDidEnd" id="Oen-vc-iDL"/>
                                     <action selector="textFieldUpdate:" destination="8ga-BZ-wpZ" eventType="valueChanged" id="zfo-i9-1c1"/>
@@ -161,6 +161,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5qo-Fm-pLh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="s1N-h9-01r">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
